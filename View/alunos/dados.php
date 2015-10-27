@@ -27,7 +27,7 @@ while($linhadoBancoDeDados = $stmt->fetch(PDO::FETCH_OBJ)){
   
   $tabelaHtml.="<tr>";
   $tabelaHtml.="<td>";
-  $tabelaHtml.= "<img src=$linhadoBancoDeDados->vchFile width='200'> </a>";
+  $tabelaHtml.= "<img src=../../Controller/$linhadoBancoDeDados->vchFile width='200'> </a>";
   $tabelaHtml.="</td>";
   $tabelaHtml.="<td>";
   $tabelaHtml.= $linhadoBancoDeDados->idAluno;
