@@ -13,29 +13,22 @@ $stmt = $con->prepare("select * from alunos");
 $stmt->execute();
 
 $tabelaHtml = "<table class ='table table-striped'>";
-  $tabelaHtml.="<tr>";
+    $tabelaHtml.="<tr>";
+  $tabelaHtml.="<td>Perfil</td>";
   $tabelaHtml.="<td>ID do Aluno</td>";
-  $tabelaHtml.="<td>";
-  $tabelaHtml.= "CPF";
-  $tabelaHtml.="</td>";
-  $tabelaHtml.="<td>";
-  $tabelaHtml.= "NOME";
-  $tabelaHtml.="</td>";
-  $tabelaHtml.="<td>";
-  $tabelaHtml.= "TELEFONE";
-  $tabelaHtml.="</td>";
-  $tabelaHtml.="<td>";
-  $tabelaHtml.= "EDIÇÃO";
-  $tabelaHtml.="</td>";
-  $tabelaHtml.="<td>";
-  $tabelaHtml.= "EXCLUIR";
-  $tabelaHtml.="</td>";
-  
+  $tabelaHtml.="<td>Cpf</td>";
+  $tabelaHtml.="<td>Nome</td>";
+  $tabelaHtml.= "<td>Telefone</td>";
+  $tabelaHtml.= "<td>Edição</td>";
+  $tabelaHtml.= "<td>Excluir</td>";
   $tabelaHtml.="</tr>";
 
 while($linhadoBancoDeDados = $stmt->fetch(PDO::FETCH_OBJ)){
   
   $tabelaHtml.="<tr>";
+  $tabelaHtml.="<td>";
+  $tabelaHtml.= "<img src=$linhadoBancoDeDados->vchFile width='200'> </a>";
+  $tabelaHtml.="</td>";
   $tabelaHtml.="<td>";
   $tabelaHtml.= $linhadoBancoDeDados->idAluno;
   $tabelaHtml.="</td>";

@@ -6,6 +6,19 @@ require '../../kint/Kint.class.php';
 /* codigo de erros/sucessos no submit */
 
 
+if(isset($_GET["tipoMsg"])){ 
+  $classeAlert = "";
+  $msgTitulo = "";
+  if($_GET["tipoMsg"] == "2"){
+    $classeAlert = "alert-danger";
+    $msgTitulo = "Erro";
+
+  }
+  else if($_GET["tipoMsg"] == "1"){
+    $classeAlert = "alert-success";
+    $msgTitulo = "Sucesso";
+  }
+}
 
 
 ?>
@@ -22,7 +35,12 @@ require '../../kint/Kint.class.php';
         <link rel="stylesheet" href="../../css/bootstrap-theme.css"/>
     </head>
     <body>
-      
+ 
+        
+            
+                    
+                   
+                    
        <div class="bg-primary">
   <h1>Hello, Cliente!</h1>
   <p>Seja Bem Vindo a Animus</p>
@@ -34,15 +52,7 @@ require '../../kint/Kint.class.php';
   <li role="presentation" class="active"><a href="dados.php">Dados User</a></li>
   <li role="presentation" class="active"><a href="pesquisar.php">Pesquisar</a></li>
   <li role="presentation" class="active"><a href="excluir.php">Excluir</a></li>
-  
 </ul>
  
     </body>
 </html>
-
-
-
-
-
-
-

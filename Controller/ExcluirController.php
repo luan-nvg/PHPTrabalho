@@ -22,10 +22,16 @@ $nossa = $_GET["txtCPF"];
   
 
 
-   
 
-  
 
-    d($_POST,$con);
+    //d($_POST,$con);
+
+if($stmt->errorCode()>0){
+        header("location: .././View/alunos/dados.php?strMsg=Erro de conexão no banco de dados&tipoMsg=erro");
+    }else{
+        header("location: .././View/alunos/dados.php?strMsg=Dados Excluidos com sucesso!&tipoMsg=sucesso");
+    }
+
+
 
 ?>

@@ -63,9 +63,9 @@ $nossa=$_POST["txtCPF"];
 
 
     if($stmt->errorCode()>0){
-        header("location: .././View./alunos/dados.php?strMsg=Erro de conexão no banco de dados&tipoMsg=erro");
+        header("location: .././View/alunos/dados.php?strMsg=Erro de conexão no banco de dados&tipoMsg=erro");
     }else{
-        header("location: .././View./alunos/dados.php?strMsg=Dados Editados com sucesso!&tipoMsg=sucesso");
+        header("location: .././View/alunos/dados.php?strMsg=Dados Editados com sucesso!&tipoMsg=sucesso");
     }
 
 
